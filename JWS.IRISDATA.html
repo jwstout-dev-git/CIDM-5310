@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<header>
+<h1>CIDM-5310-71</h1>
+<h2>BILC Assignment 2</h2>
+<h2>Justin Stout</h2>
+</header>
+<html>
+<body style="background-color:lightblue;">
+<p style="background-color:yellow;"><b><i><font size="4">I can link the spreadsheet output - but having issues linking to specific tabs in the array.</p></b></i>
+</html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {margin:0;}
+
+.icon-bar {
+    width: 100%;
+    background-color: #555;
+    overflow: auto;
+}
+
+.icon-bar a {
+    float: left;
+    width: 20%;
+    text-align: center;
+    padding: 12px 0;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 36px;
+}
+
+.icon-bar a:hover {
+    background-color: #000;
+}
+
+.active {
+    background-color: #4CAF50 !important;
+}
+</style>
+<body>
+
+<div class="icon-bar">
+  <a class="active" href="#"><i class="fa fa-home"><br><font size="4">IRIS DATA</i></a> 
+  <a href="IRISDATA.html" target="_blank"><i class="fa fa-file-excel-o"><br><font size="4">TOP 15%</i></a></td>
+  <a href="IRISDATA.html" target="_blank" target="_blank"><i class="fa fa-file-excel-o"><br><font size="4">Avg-Length_Width</i></a>
+  <a href="IRISDATA.html" target="_blank" target="_blank"><i class="fa fa-file-excel-o"><br><font size="4">Min-Class</i></a>
+  <a href="IRISDATA.html" target="_blank" target="_blank"><i class="fa fa-file-excel-o"><br><font size="4">Max-Class</i></a>
+  <a href="IRISDATA.html" target="_blank" target="_blank"><i class="fa fa-file-excel-o"><br><font size="4">Std-Dev</i></a>
+</div>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<p class=MsoListParagraph style='text-indent:-.25in'><span style='font-size:
+10.0pt;line-height:107%'>1.<span style='font:7.0pt "Times New Roman"'>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:10.0pt;line-height:107%'><b>1. Select the Top
+15% of records for each class (three queries here)</B</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><span
+style='font-size:9.0pt;line-height:107%'>SELECT class, sepal_length,
+sepal_width, petal_length, petal_width</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><span
+style='font-size:9.0pt;line-height:107%'>FROM jwstout_test.irisdata</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><span
+style='font-size:9.0pt;line-height:107%'>where class LIKE &quot;Iris-versicolor&quot;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><span
+style='font-size:9.0pt;line-height:107%'>LIMIT 15;</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><span
+style='font-size:9.0pt;line-height:107%'>SELECT class, sepal_length,
+sepal_width, petal_length, petal_width</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><span
+style='font-size:9.0pt;line-height:107%'>FROM jwstout_test.irisdata</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><span
+style='font-size:9.0pt;line-height:107%'>where class LIKE
+&quot;Iris-setosa&quot;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><span
+style='font-size:9.0pt;line-height:107%'>LIMIT 15;</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal'><span style='font-size:9.0pt'>SELECT class, sepal_length, sepal_width,
+petal_length, petal_width</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal'><span style='font-size:9.0pt'>FROM jwstout_test.irisdata</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal'><span style='font-size:9.0pt'>where class LIKE
+&quot;Iris-virginica&quot;</span></p>
+<p class=MsoListParagraph style='text-indent:-.25in'><span style='font-size:
+10.0pt;line-height:107%'>2.<span style='font:7.0pt "Times New Roman"'>
+<br> </br>
+</span></span><span style='font-size:10.0pt;line-height:107%'>2. Show the MIN and
+MAX for each class (three queries here)</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><span
+style='font-size:9.0pt;line-height:107%'>SELECT MAX(class), MAX(sepal_length),
+MAX(sepal_width), MAX(petal_length), MAX(petal_width), MAX(ID) </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><span
+style='font-size:9.0pt;line-height:107%'>FROM jwstout_test.irisdata</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><span
+style='font-size:9.0pt;line-height:107%'>where class LIKE
+&quot;Iris-setosa&quot;;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal'><span style='font-size:9.0pt'>SELECT MAX(class), MAX(sepal_length),
+MAX(sepal_width), MAX(petal_length), MAX(petal_width), MAX(ID) </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal'><span style='font-size:9.0pt'>FROM jwstout_test.irisdata</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal'><span style='font-size:9.0pt'>where class LIKE
+&quot;Iris-versicolor&quot;;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal'><span style='font-size:9.0pt'>SELECT MAX(class), MAX(sepal_length),
+MAX(sepal_width), MAX(petal_length), MAX(petal_width), MAX(ID) </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal'><span style='font-size:9.0pt'>FROM jwstout_test.irisdata</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal'><span style='font-size:9.0pt'>where class LIKE
+&quot;Iris-virginica&quot;;<br>
+<br>
+</span></p>
+<br> </br>
+</span></span><span style='font-size:10.0pt;line-height:107%'>3. Show the AVG
+value for petal length and petal width for each class (three queries here)</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal'><span style='font-size:9.0pt'>SELECT (class), AVG(petal_length),
+AVG(petal_width)</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal'><span style='font-size:9.0pt'>FROM jwstout_test.irisdata</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal'><span style='font-size:9.0pt'>where class LIKE
+&quot;Iris-versicolor&quot;;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal'><span style='font-size:9.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal'><span style='font-size:9.0pt'>SELECT (class), AVG(petal_length),
+AVG(petal_width)</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal'><span style='font-size:9.0pt'>FROM jwstout_test.irisdata</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal'><span style='font-size:9.0pt'>where class LIKE &quot;Iris-setosa&quot;;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal'><span style='font-size:9.0pt'>SELECT (class), AVG(petal_length),
+AVG(petal_width)</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal'><span style='font-size:9.0pt'>FROM jwstout_test.irisdata</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal'><span style='font-size:9.0pt'>where class LIKE
+&quot;Iris-virginica&quot;;<br>
+<br>
+</span></p>
+<br> </br>
+<p class=MsoListParagraph style='text-indent:-.25in'><span style='font-size:
+10.0pt;line-height:107%'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:10.0pt;line-height:107%'>4. Show all values
+for sepal length and sepal height that are within +/-  one Standard Deviation
+from the mean of those values</span></p>
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal'><span style='font-size:9.0pt'>SELECT sepal_length, class</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal'><span style='font-size:9.0pt'>FROM jwstout_test.irisdata t</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal'><span style='font-size:9.0pt'>INNER JOIN (</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal'><span style='font-size:9.0pt'>                select </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal'><span style='font-size:9.0pt'>    STD(sepal_length) as stddev,</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal'><span style='font-size:9.0pt'>    AVG(sepal_length) as mean</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal'><span style='font-size:9.0pt'>    FROM jwstout_test.irisdata</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal'><span style='font-size:9.0pt'>) X </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal'><span style='font-size:9.0pt'>ON t.sepal_length &gt;= X.mean - X.stddev</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal'><span style='font-size:9.0pt'>AND</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal'><span style='font-size:9.0pt'>t.sepal_length &lt;= X.mean + X.stddev</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal'><span style='font-size:9.0pt'>ORDER BY sepal_length, class;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal'><span style='font-size:9.0pt'>SELECT @mean := AVG(sepal_length), @std
+:= stddev_samp(sepal_length), @mean := AVG(sepal_width), @std :=
+stddev_samp(sepal_width)</span></p>
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal'><span style='font-size:9.0pt'>From jwstout_test.irisdata;<br>
+<br>
+</span></p>
+<br>
+</span></p>
+<br> </br>
