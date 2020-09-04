@@ -1,0 +1,15 @@
+ssh_authorized_keys:
+  - ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAzy8ARuoV267s2upzujLrT97BiUPk20SSSq2cSRfBxcH4MNzjH/fTKgudDFwR6Zo/xa0O3kPSauiSgUAjr54AJ2JJ7aFDjXLcjjAdpy/ooBT2iJ6/tOs/tnNXCiKikPh3EgfZYYdmi6Dj4AYiJ3uS1dxg+s55ATKbNd2W+t02ygo50efaTbNItKhzRX6nL9cckF1iuiFMZd/TI8erGMGnNtY8fOVfN7MbPZ5ioztJhO2ARiFxJ2dy2YKxu784d2Fb2tvGsg8guTGvrf9hF7G6x/xqs2bgpBqCBu0PEvgoJ/DwYuHg1boezqt8WiwielmMHHksrolFjpcSsYutkMe2OQ== sc-admin@rm-node.stoutcasa.us
+hostname: rm-node.stoutcasa.us
+rancher:
+  network:
+    interfaces:
+      eth0:
+        address: 192.168.2.180/23
+        gateway: 192.168.2.1
+        mtu: 1500
+        dhcp: false
+    dns:
+      nameservers:
+        - 192.168.2.1
+        - 8.8.8.8
